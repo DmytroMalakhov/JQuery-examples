@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создание элементов</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>div element</div>
+    <script type="text/javascript">
+        //Добавляется параграф перед div
+        $("<p>Вставляется перед div</p>").insertBefore("div");
+        //Добавляется параграф в div перед содержимым div елемента
+        $("<p>Добавляется параграф перед div текстом</p>").prependTo("div");
+        //Добавляется параграф в div после содержимого div елемента
+        $("<p>Добавляется параграф после div текста</p>").appendTo("div");
+        //Добавляется параграф после div
+        $("<p>Вставляется после div</p>").insertAfter("div");
+    </script>
+</body>
+</html>

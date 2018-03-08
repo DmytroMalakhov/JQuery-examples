@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор элементов. Итог</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        function valid() {
+            //Записываем в переменную выбранный пользователем пол
+            var state = $("input[name='sex']:checked").val();
+            //Показываем span c id="massage"
+            $("#massage").show();
+            //Если переменная не выбрана пользователем выводим в документе текст: "Укажите пол"
+            if(!state) {
+                return $("#massage").html("Укажите пол");
+                //Скрываем span c id="massage"
+            } else $("#massage").hide();
+            //Если в переменную записан мужской пол, то показываем картинку
+            if (state == "male")
+                $('#img').show();
+        }
+    </script>
+</head>
+<body>
+    <form name="form" id="form">
+        <label for="female">Женский</label>
+        <input type="radio" id="female" name="sex" value="female">
+        <label for="male">Мужской</label>
+        <input type="radio" id="male" name="sex" value="male">
+        <br><br>
+        <span id="massage"></span>
+        <br>
+        <input type="button" id="done" onclick="return valid()" value="Готово">
+    </form>
+    <img src="1.jpg" style="display:none" id="img">
+</body>
+</html>

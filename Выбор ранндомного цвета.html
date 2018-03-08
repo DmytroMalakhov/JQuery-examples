@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор ранндомного цвета</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#add_block").click(function () {
+                var ranName = getNamber(0, 777);
+                $("#blocks").prepend("<div class='block " + ranName +"'>" + ranName + "</div>");
+                $("." + ranName).css("background", "#" + getNamber(0, 9) + getNamber(0, 9) + getNamber(0, 9) + getNamber(0, 9) + getNamber(0, 9) + getNamber(0, 9));
+            });
+
+            function getNamber(max, min) {
+                return Math.floor(Math.random() * (max - min +1)) + min;
+            }
+        });
+    </script>
+    <style>
+        .block {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="add_block">Добавить блок</button>
+    <div id="blocks"></div>
+</body>
+</html>

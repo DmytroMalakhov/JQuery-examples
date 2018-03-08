@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Анимация изобраения</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("img").bind("click", function (event) {
+               $(event.target).parents().css("text-align", "center");
+
+                $(event.target).animate({
+                    width: $(event.target).width() * 2,
+
+                    height: $(event.target).height() * 2,
+                }, 3000);
+            })
+            $("img").bind("dblclick", function (event) {
+                $(event.target).parents().css("text-align", "none");
+
+                $(event.target).animate({
+                    width: $(event.target).width() / 2,
+
+                    height: $(event.target).height() / 2,
+                }, 3000);
+            })
+        });
+    </script>
+    <style>
+        img{
+            width: 200px;
+            border: 5px solid greenyellow;
+            /*margin-left: 8px;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1" id="house">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+        <img src="http://bipbap.ru/wp-content/uploads/2017/10/119S-0001-rear1-8-640x480.jpg" alt="Дом" title="Дом1">
+    </div>
+</body>
+</html>

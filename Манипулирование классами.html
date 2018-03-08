@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Манипулирование классами</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .div_r {
+            background-color: #ff0300;
+        }
+        .div_g {
+            background-color: #00ff05;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">Text</div>
+    <script type="text/javascript">
+        var test = prompt("r или g?");
+        while (test != "r" && test != "g"){
+            alert("Выберите фон красный (r) или зеленый(g)");
+            test = prompt("r или g?");
+        }
+        //Добавляем в div class введеный пользователем
+        $("#div").attr("class", "div_" + test);
+    </script>
+</body>
+</html>

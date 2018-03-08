@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Функция html() и text()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div">
+        Блок1
+        <p>Абзац</p>
+    </div>
+
+    <script type="text/javascript">
+        //Выводит документ с тегами
+        alert($("#div").html());
+        //Выводит документ без тегами
+        alert($("#div").text());
+    //Изменяем текст в абзаце
+    $("p").html("<p>Измененный абзац</p>");
+    </script>
+</body>
+</html>

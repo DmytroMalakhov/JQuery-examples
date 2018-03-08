@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор элементов по тегу и атрибуту</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="fid">Див 1</div>
+    <div class="fid">Див 2</div>
+    <p class="fid">Параграф 1</p>
+    <p class="fid">Параграф 2</p>
+
+    <img src="1.jpg" alt="1">
+    <img src="2.jpg" alt="2" title="2">
+    <script>
+        // Выбор елементов по тегу
+        var div = $('div');
+        alert(div.length);
+
+        // Выбор елементов по атрибуту
+        var img = $('img[title]');
+        alert(img.length);
+    </script>
+</body>
+</html>

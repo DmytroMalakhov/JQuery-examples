@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор элементов по классу(.get)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="fid">Див 1</div>
+    <div class="fid">Див 2</div>
+    <p class="fid">Параграф 1</p>
+    <p class="fid">Параграф 2</p>
+    <script>
+        //Выбираем только те классы fid который преналежат div-ам
+        var str = $('div.fid');
+    for(var i = 0; i < str.length; i++) {
+        if(i == 0){
+            //обращаемся к переменной str у которой индекс равен 0
+            str.get(i).style.color = "red";
+        } else
+            //обращаемся к переменной str у которой индекс равен другому значению
+            str.get(i).style.color = "blue";
+    }
+    //Установка элементу p включить нуный цвет через 2000 мсек = 2 сек
+    setTimeout("$('p.fid').get(0).style.color = 'white'", 2000);
+    setTimeout("$('p.fid').get(0).style.color = 'black'", 4000);
+    </script>
+</body>
+</html>

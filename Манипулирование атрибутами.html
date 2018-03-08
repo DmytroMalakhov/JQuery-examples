@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Манипулирование атрибутами</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div1">Блок1</div>
+    <div id="div2">Блок2</div>
+    <script type="text/javascript">
+        //Присваеваем div с id="div1" css параметры
+        $('#div1').css("background-color", "yellowgreen");
+        $('#div1').css("font-size", "40px");
+        $('#div1').css("width", "300px");
+        //Присваеваем div с id="div1" высоту равную ширине блока
+        $('#div1').css("height", function () {
+            return $(this).width();
+        });
+        $('#div2').css("background-color", "#feff12");
+        $('#div2').css("font-size", "40px");
+        $('#div2').css("width", "300px");
+        //Присваеваем div с id="div2" высоту которая равна введенной цифре пользователем
+        $('#div2').css("height", function () {
+            var promt1 = prompt("Введите кол-во пикселей: ")
+            return promt1 + "px";
+        });
+    </script>
+</body>
+</html>

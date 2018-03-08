@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор ранндомного цвета</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#add_comment").click(function () {
+                $("<p>" + comment + "</p>").append("#add_comment");
+                $("#comment").css("display", "block");
+                $("#add_comment").hide();
+                $("#hide_comment").show();
+                $("#send_comment").show();
+            });
+            $("#hide_comment").click(function () {
+                $("#comment").css("display", "none");
+                $("#add_comment").show();
+                $("#hide_comment").hide();
+                $("#send_comment").hide();
+            });
+            $("#send_comment").click(function () {;
+                $("#comment").css("display", "none");
+                $("#add_comment").show();
+                $("#hide_comment").hide();
+                $("#send_comment").hide();
+            });
+            $(document).on("click", "#send_comment", function () {
+                var comment = $("textarea[name='comment']").val()
+                alert("Подождите пока загрузится ваш коментарий");
+                return $("<p>" + comment + "</p>").appendTo("div#comments");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="comments">
+        <p>Коментарий_1</p>
+        <p>Коментарий_2</p>
+        <p>Коментарий_3</p>
+    </div>
+    <textarea name="comment" id="comment"  cols="30" rows="10" style="display: none"></textarea>
+    <button id="add_comment">Добавить коментарий</button>
+    <button id="hide_comment" style="display: none">Скрыть коментарий</button>
+    <button id="send_comment" style="display: none">Отправить коментарий</button>
+</body>
+</html>

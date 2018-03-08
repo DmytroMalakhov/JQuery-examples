@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор элементов по псевдоелементам</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <ul id="menu">
+        <li><a href="#">Ссылка_1</a></li>
+        <li><a href="#">Ссылка_2</a></li>
+        <li><a href="#">Ссылка_3</a></li>
+        <li><a href="#">Ссылка_4</a></li>
+        <li><a href="#">Ссылка_5</a></li>
+    </ul>
+    <script type="text/javascript">
+        //Показать первый элемент
+        var str = $("#menu li a:first");
+        alert(str.html());
+
+        //Показать ссылку_5
+        var str = $("#menu li a:eq(4)");
+        alert(str.html());
+    </script>
+</body>
+</html>

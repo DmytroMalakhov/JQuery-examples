@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Обработчик событий</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        //Елемент функции bind имеет обьязательный параметр event!!!
+        function incSize (event) {
+            //Присваеваем переменной width число затем в скобках обращаемся к параметру event у него к target потом
+            //style и width. К width применяем параметр substring он уберает от строки "50px" последние два символа
+           var width = Number(event.target.style.width.substring(0, event.target.style.width.length - 2));
+           //Присваеваем event.target.style.width при нажатии добавлять 5px к ширине
+           event.target.style.width = (width + 5) + "px";
+           $("<p>Координаты мышки при нажатии: x - " + event.screenX + ", y - " + event.screenY + "</p>").insertAfter("div:last");
+        }
+
+        $(document).ready(function () {
+            //Функция bind не увидит те теги которые были созданы после загрузки страницы
+            $("div").bind("click", incSize)
+            //Функция on может работать с тегами которые были созданы до и после загрузки страницы
+            $(document).on("click", "p", function () {
+                alert("Text");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="height: 50px; width: 50px; background-color: greenyellow"></div>
+    <div style="height: 50px; width: 50px; background-color: red"></div>
+    <div style="height: 50px; width: 50px; background-color: blue"></div>
+</body>
+</html>

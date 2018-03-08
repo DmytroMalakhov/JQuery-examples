@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление элементов</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div"><p>Блок</p></div>
+    <div id="div_2" style="display: none"></div>
+    <img src="1.png" alt="IMG">
+    <img src="2.png" alt="IMG">
+    <img src="3.png" alt="IMG"> <br>
+
+    <a href="#">1</a>
+    <a href="#">2</a>
+    <script type="text/javascript">
+        //Добавляет в блок div span елемент
+        $("div").append("<span>Text</span>");
+        //Перемещает картинки в блок "div_2"
+        $("img").appendTo($("#div_2"));
+
+        //Оборачивает нужный тег в другой тег
+        $("a").wrap("<p style='background-color: #00ff05'></p>")
+    </script>
+</body>
+</html>

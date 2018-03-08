@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Функция clone()</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="div" style="background-color: #00ff05">
+        Блок
+        <p>Абзац</p>
+    </div>
+
+    <script type="text/javascript">
+        //Клонирует блок
+        var block = $("div").clone();
+        //Добавляем переменной красный фоновый цвет
+        block.css("background", "red")
+        //Выводи блок в теге body
+        $("body").append(block)
+    </script>
+</body>
+</html>
